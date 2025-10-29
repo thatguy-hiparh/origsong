@@ -15,7 +15,7 @@ import { normalizeISRC } from '../utils/isrcUtils';
 
 class SearchService {
   constructor() {
-    this.baseURL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:3001';
+    this.baseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
     this.timeout = 10000; // Reduced to 10 seconds for faster fallback
     this.maxRetries = 2;
     this.retryDelay = 1000; // 1 second base delay
@@ -37,10 +37,10 @@ class SearchService {
         consumerSecret: import.meta.env.VITE_DISCOGS_CONSUMER_SECRET
       },
       allmusic: {
-        apiKey: process.env.REACT_APP_ALLMUSIC_API_KEY
+        apiKey: import.meta.env.VITE_ALLMUSIC_API_KEY
       },
       secondhandsongs: {
-        apiKey: process.env.REACT_APP_SECONDHANDSONGS_API_KEY
+        apiKey: import.meta.env.VITE_SECONDHANDSONGS_API_KEY
       }
     };
     

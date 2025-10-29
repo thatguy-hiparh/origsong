@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop.jsx";
-import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import ScrollToTop from "components/ScrollToTop";
+import ErrorBoundary from "components/ErrorBoundary";
 
-import Login from "./pages/login";
-import Register from "./pages/register";
-import AccountSettings from "./pages/account-settings";
-import SongResearchResults from "./pages/song-research-results";
-import ResearchDashboard from "./pages/research-dashboard";
-import NotFound from "./pages/NotFound.jsx";
+import Login from "pages/login";
+import Register from "pages/register";
+import AccountSettings from "pages/account-settings";
+import SongResearchResults from "pages/song-research-results";
+import ResearchDashboard from "pages/research-dashboard";
+import NotFound from "pages/NotFound";
 
 const Routes = () => {
   return (
